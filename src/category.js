@@ -21,7 +21,7 @@ class Category extends React.Component{
 			this.props.onAddSelectIcon()
 
 			let categoryInfo = {
-				value: target.getElementsByTagName('span')[0].innerHTML ,
+				value: target.dataset.category ,
 				img: target.getElementsByTagName('i')[0].className
 			};
 
@@ -39,40 +39,67 @@ class Category extends React.Component{
 
 				{this.props.store.showSelectIcon && <SelectIcon coords={coords} />}
 
-				<div className='categoryItem'>
+				<div 
+					data-category='Fun'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-wine-glass-alt"></i>
 					<span>Fun</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Medicine'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-prescription-bottle-alt"></i>
 					<span>Medicine</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Buy'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-laptop"></i>
 					<span>Buy</span>
 				</div>
 
-				<div className='categoryItem'>
+				<div 
+					data-category='Travels'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-plane-departure"></i>
 					<span>Travels</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Food'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-utensils"></i>
 					<span>Food</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Presents'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-gift"></i>
 					<span>Presents</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Sport'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-dumbbell"></i>
 					<span>Sport</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Transport'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-bus"></i>
 					<span>Transport</span>
 				</div>
-				<div className='categoryItem'>
+				<div 
+					data-category='Clothes'
+					className='categoryItem'
+				>
 					<i className="fontAwesomIcons fas fa-tshirt"></i>
 					<span>Clothes</span>
 				</div>

@@ -14,7 +14,10 @@ if(!localStorage.getItem('store')) {
 		showSelectIcon:false
 	}
 } else {
-	initialState = JSON.parse(localStorage.getItem('store'));
+	let newStore = JSON.parse(localStorage.getItem('store'));
+	newStore.showSelectIcon = false;
+
+	initialState = newStore;
 }
 
 function reducer(state = initialState, action){
@@ -54,6 +57,7 @@ const store = createStore(reducer);
 
 store.subscribe(() => {
 	localStorage.setItem('store', JSON.stringify(store.getState()));
+	console.log(store.getState())
 })
 
 ReactDOM.render(
