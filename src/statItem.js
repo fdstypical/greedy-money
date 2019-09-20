@@ -1,26 +1,42 @@
 import React from 'react';
 import Cost from './Cost';
 
-function StatItem(props) {
+class StatItem extends React.Component {
 
-	let categoryValue = props.statItem[0].categoryValue;
-	let categoryImg = props.statItem[0].categoryImg.slice(16) + ' costCategoryImg';
+	constructor(props){
+		super(props)
 
-	let sum = 0;
+		this.state = {
+			showItems: false,
+		}
+	}
 
-	for(let i=0;i<props.statItem.length;i++) sum += +props.statItem[i].cost;
+	handleShowItem = () => {
+		this.setState( state => ({
+			showItems: !state.showItems,
+		}))
+	}
 
-	return(
-		<div>
-			<div className = 'statisticsItem'>
-				<i className={categoryImg}></i>
-				<span className='statCost'>{sum} <b className='valute'>&#x20bd;</b></span>
-				<span className='statCtg'>{categoryValue}</span>
-			</div>
-			<div className='detailList'>
-				{props.statItem.length > 1 && 
+	render(){
+
+		let categoryValue = this.props.statItem[0].categoryValue;
+		let categoryImg = this.props.statItem[0].categoryImg.slice(16) + ' costCategoryImg';
+
+		let sum = 0;
+
+		for(let i=0;i<this.props.statItem.length;i++) sum += +this.props.statItem[i].cost;
+
+		return(
+			<div>
+				<div className = 'statisticsItem' onClick={this.handleShowItem}>
+					<i className={categoryImg}></i>
+					<span className='statCost'>{sum} <b className='valute'>&#x20bd;</b></span>
+					<span className='statCtg'>{categoryValue}</span>
+				</div>
+
+				{this.state.showItems && <div className='detailList'>
 					<ul className='detail-ul-list'>
-						{props.statItem.map((item,index) => {
+						{this.props.statItem.map((item,index) => {
 							return <li 
 										key={index}
 										className='detailItem'
@@ -35,10 +51,10 @@ function StatItem(props) {
 							</li>
 						})}
 					</ul>
-				}
+				</div>}
 			</div>
-		</div>
-	)
+		)
+	}
 }
 
 export default StatItem;

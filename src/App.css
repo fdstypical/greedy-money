@@ -195,6 +195,12 @@ body{
 
 .statList{
 	padding:0;
+	/* ОТМЕНА ВЫДЕЛЕНИЯ */
+	-webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    transition:all 0.2s ease;
+
 }
 .statListItem{
 	list-style:none;
