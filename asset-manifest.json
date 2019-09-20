@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/greedy-money/static/css/main.89870b82.chunk.css",
+    "main.js": "/greedy-money/static/js/main.897f0b95.chunk.js",
+    "main.js.map": "/greedy-money/static/js/main.897f0b95.chunk.js.map",
+    "runtime~main.js": "/greedy-money/static/js/runtime~main.1dbcccfa.js",
+    "runtime~main.js.map": "/greedy-money/static/js/runtime~main.1dbcccfa.js.map",
+    "static/js/2.7be870b8.chunk.js": "/greedy-money/static/js/2.7be870b8.chunk.js",
+    "static/js/2.7be870b8.chunk.js.map": "/greedy-money/static/js/2.7be870b8.chunk.js.map",
+    "index.html": "/greedy-money/index.html",
+    "precache-manifest.77787e59608bb8c727b405336f9e4077.js": "/greedy-money/precache-manifest.77787e59608bb8c727b405336f9e4077.js",
+    "service-worker.js": "/greedy-money/service-worker.js",
+    "static/css/main.89870b82.chunk.css.map": "/greedy-money/static/css/main.89870b82.chunk.css.map"
+  }
+}
